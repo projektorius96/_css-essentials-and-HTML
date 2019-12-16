@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!-- if bootstrap is used <link rel=¨stylesheet¨ type=¨text/css¨ href=¨[url_bootstrap_theme]¨> this line must be at the topmost -->
+<!-- if css is in the same folder as html <link rel=¨stylesheet¨ type=¨text/css¨ href=¨[file_name].css¨> -->
+<!-- if css is one folder forward [subfolder of parent html folder] <link rel=¨stylesheet¨ type=¨text/css¨ href=¨..\css\mystyle.css¨> -->
+<!-- <style>[for internal styling]</style> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {overflow-x: hidden;
+          margin: 16px;
+          background-color: #f1f8ff;
+}
+
+h3 {
+        background-color: #9dff00;
+        display: flex;
+}
+
+.flex-container-row-one {
+  /* position: relative; */
+  background-color: #1e90ff;
+  text-align: justify;
+  width: 60%;
+  float: left;
+  
+    /* FLEXBOX PROPERTIES BELOW : */
+
+  display: flex; /* MUST BE SET TO FLEX TO USE FLEXBOX PROPERTIES */
+  flex-direction: column;
+}
+    
+.flex-container-row-two {
+  background-color: #ff1ec2;
+  text-align: justify;
+  width: 40%;
+  float: right;
+  
+  /* 
+  If want to lift down with accordance to -container-row-one use these two lines below:
+  position: relative;
+  top: 0px;
+  */ 
+    
+  /* FLEXBOX PROPERTIES BELOW : */
+
+  display: flex; /* MUST BE SET TO FLEX TO USE FLEXBOX PROPERTIES */
+  flex-direction: column;
+}
+
+.flex-container-row-one> div {
+  background-color: #eded5a;
+  margin: 8px 8px 8px 8px;
+}
+
+.flex-container-row-two > div {
+  background-color: #9ad48c;
+    margin: 8px 8px 8px 8px; }
+    
+#first-element-in-row-one {
+      flex: 3;  /* If width property defined above this CSS will not display any further result */ 
+}
+
+#first-element-in-row-two {
+      flex: 2;  /* If width property defined above this CSS will not display any further result */ 
+}
+
+#first-element-in-row-three {
+      flex: 1;  /* If width property defined above this CSS will not display any further result */ 
+}
+</style>
+</head>
+<body>
+<h3>FLEXBOX TUTORIAL 1.0</h3>
+<div class="flex-container-row-one">
+  <div id="first-element-in-row-one">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  </div>
+  <div id="first-element-in-row-two">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem </div>
+  <div id="first-element-in-row-three">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+  </div>
+    
+  <div class="flex-container-row-two">
+  <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  </div>
+  <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem </div>
+  <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+</div>
+</body>
+</html>
