@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.ancestor {
+  border: 3px solid black;
+  overflow: auto;
+  position: absolute;
+  width: 400px;
+  height: 220px;
+  top: 0px; /* Default TOP from document.body | change to 50px; in order to see how relative as ancestor is grouped with descendant within and moved alltogether at the same time */
+} 
+
+div.descendant {
+  border: 1px solid red;
+  position: relative; /* make it absolute to overlap ancestor text */
+  width: 200px;
+  height: 200px;
+  top: 0px; /* if change top: 24px to 0px */
+}
+</style>
+</head>
+<body>
+<!-- Usually positions made not this way i.e. it means positions is not nested, but if nested ancestor top value modification makes html elements to be grouped and be moved as the grouped elements -->
+<!-- https://www.youtube.com/watch?v=F0ifZxhlTUI [well explained tutorial] -->
+<div class="ancestor">WebGL Scene same as document.body has to be in absolute non-dependent position. Also [ z-index: value ] always for ancestors only, which conditionally set [ : value ] whether to -1 or 1, if -1 when the scene becomes as background and and the rest content becomes as foreground automatically!
+  <div class="descendant">Descendant content such as buttons that overlap the WebGL Scene must be in [position: relative]. It does not need z-index for itself to make it as foreground. This job is done by ancestors z-index only!</div>
+</div>
+
+</body>
+</html>
