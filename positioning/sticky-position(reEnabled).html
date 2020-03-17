@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: #dedede
+height: 768px;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8cf;
+  border: 1px solid #4CAF50;
+}
+.overlay {
+position: sticky;
+  padding: 5px;
+  top: 0;
+  background-color: orange;
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+<p>In this tutorial based on w3school.com we trying to describe the position: sticky class ability to be overlayed i.e disabled and be enabled after some time again i.e become visable once again</p>
+<p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+<p>Note: IE/Edge 15 and earlier versions do not support sticky position.</p>
+
+<div class="sticky">I am sticky! (INDEPENDENT PARENT DIV)</div>
+
+<div style=" padding-bottom: 1000px; background-color:#ffc8f9"> I AM PARENT DIV JUST BEHIND I am sticky! with 1000px padding-bottom
+  <p>Div with .overlay class is child div of parent div in pink panther color</p>
+  <div class="overlay">I overlayed "I am sticky!" div element defined above (DEPENDANT CHILD DIV)</div>
+  <p class="lastAfter"><!-- The moment <div class="overlay"> reaches <p class="lastAfter"> element the <div class="sticky"> is reEnabled --></p>
+  
+
+</div>
+
+</body>
+▼</html>
