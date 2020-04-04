@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 2000px;
+}
+    div.container > * {
+    display: grid;
+    grid-template-columns: auto; /* :repeat(times, x-timesfr)*/
+    grid-auto-rows: minmax(100px, auto); /* meant for heighting rows */
+    /* */
+}
+    div.absPos-container > * {
+    position: fixed; /* with fixed div takes up to 101.05% */
+    left:8px;
+    right:8px;
+    
+}
+    div.nonAbsPos-container > * {
+    width:100%;
+    position: relative;
+    top: 20px;
+    /* GRID options below */
+}
+    
+    header {
+    z-index: 10;
+    top: 0px;
+    background-color:yellow;
+    border: 1px solid red;
+}
+    nav {
+    background-color:greenyellow;
+    border: 1px solid orange;
+}
+    section {
+    background-color:orangered;
+    border: 1px solid black;
+    position: relative;
+    top: 30px;
+}
+    footer {
+    z-index: 10;
+    bottom:0px;
+    background-color:goldenrod;
+    border: 1px solid grey;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="absPos-container">
+    <header>HEADER</header>
+    <footer>FOOTER</footer>
+</div>
+<div class="nonAbsPos-container">
+    <nav>NAVIGATION</nav>
+</div>
+<section>SECTION</section>
+</div>  
+<script>
+/* For debuggin */
+/* var all = document.querySelectorAll("div.absPos > *")
+all // [header, nav, section, footer]
+*/    
+</script>
+</body>
+</html>
