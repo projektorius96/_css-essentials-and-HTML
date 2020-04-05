@@ -12,6 +12,11 @@ body { /* works as the topmost parent class */
     min-height: auto;
     position: relative;
     top: 0px; /* change value if "take apart from topmost point of viewport" is needed */
+    /* A bit of RWD */
+    display: grid;
+    grid-template-columns: auto; /* :repeat(times, x-timesfr)*/
+    grid-auto-rows: minmax(100px, auto); /* meant for heighting rows */
+    /* */
 }
     
 .header-class {
@@ -57,9 +62,7 @@ section#row-middle { /* just for the matter of its appearance */
     padding: 30px;
     margin-bottom: 20px;
 }
-/* BE NOTICED: If applying posisition:fixed; it must follow right and left being set at least to 8px in order to be displayed as norman div
-CAUTION!: No width:100% has to be set otherwise it will ruin up the span of div */
-*/
+/* BE NOTICED: If applying posisition:fixed; with width:100%; it must follow right and left being set at least to 8px in order to be displayed as norman div! */
 </style>
 </head>
 <body>
