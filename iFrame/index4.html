@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title>Edukacinis projektas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <head> 
+    <style>
+/* Body customization */
+        body {background-color:yellow;
+        box-sizing: border-box;}
+        div {box-sizing: border-box;
+             display: block;}
+        iframe {
+                display: block;
+                box-sizing: border-box;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+                border-right: 0;
+                border-left: 0;
+        }
+        div#first {
+        background-color:#f48762;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 50px;
+        border-top: 1px solid black;
+        text-align: center;
+        }
+        div#second {
+        background-color: #7be512;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 50px;
+        text-align: center;
+        }
+/* Body customization */
+        
+/* Body scrollbar customization */
+        
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+/* Handler a.k.a thumb */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: orange; 
+}
+/* Body scrollbar customization */
+</style>
+</head> 
+<link rel="stylesheet" href="w3.css">
+<body>
+    
+<!-- Navigation panel fixed size -->
+<div class="w3-row"> 
+<div class="w3-bar w3-black">
+  <a href="#" class="w3-bar-item w3-button w3-orange">Pagrindinis</a>
+  <a href="https://www.facebook.com/groups/206698379861905/?ref=nf_target&fref=nf" class="w3-bar-item w3-button w3-blue">Facebook</a>
+    </div>
+    </div>
+<!-- Navigation panel fixed size -->
+
+<!-- no w3-container ::after w3-row = fluid-size-container -->
+<div id="myautoscroll" class="w3-row">
+    <div id="first">MEDICINA</div>
+  <div  class="w3-col l12 w3-pale-red w3-center">
+      <iframe src="https://drive.google.com/embeddedfolderview?id=0B_br_EhKGloxSTJMSV9USHk3ZzA#grid" style="width:100%; height:600px;"></iframe>
+  </div>
+    <div id="myautoscroll" class="w3-row"></div>
+    <div id="second">KINEZITERAPIJA</div>
+  <div class="w3-col l12 w3-pale-green w3-center">
+      <iframe src="https://drive.google.com/embeddedfolderview?id=0B_br_EhKGloxZHhpMEVIbmx2Mlk#grid" style="width:100%; height:600px;"></iframe>
+  </div>
+  </div>
+<!-- w3-container = fixed-size-container -->
+
+</body>
+</html>
