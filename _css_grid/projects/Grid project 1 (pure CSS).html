@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+* {box-sizing: border-box;}
+div.row-index {
+margin-bottom: 4px;
+    }
+div.row-one {background-color:yellow;}
+div.row-two {background-color:orange;}
+div.row-one > * {
+border: 1px solid black;
+background-color: aquamarine;
+}
+div.row-two > * {
+border: 1px solid black;
+background-color: aquamarine;
+}
+div.row-one {
+  display: grid;
+  grid-template-rows: minmax(auto, 1fr);
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; instead of this we use :repeat(5, 1fr) shown below: */
+  grid-template-columns: repeat(8, 1fr); /* repeat(x, 1fr) if x = value of some of elements within wrapper, then all wrapper goes in one row ; */
+  grid-gap: 4px;
+  padding: 4px; /* looks like border but it's not */
+}
+
+div.row-two {
+  display: grid;
+  grid-template-rows: minmax(auto, 1fr);
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; instead of this we use :repeat(5, 1fr) shown below: */
+  grid-template-columns: repeat(2, 1fr); /* repeat(x, 1fr) if x = value of some of elements within wrapper, then all wrapper goes in one row ; */
+  grid-gap: 8px;
+  padding: 4px; /* looks like border but it's not */
+}
+</style>
+</head>
+<body>
+<div class="row-index row-one">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
+</div>
+<div class="row-index row-two">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+</div>
+</body>
+</html>
