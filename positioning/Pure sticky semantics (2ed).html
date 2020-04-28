@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/w3.css"> 
+    <style>
+    * {
+    box-sizing:border-box;
+}
+
+body {
+    min-height:auto;
+}
+
+div[name="wrapper"] {
+    text-align: center;
+}
+
+header { /* meant for header-image */
+    background-color:yellow;
+    position: static;
+    padding:40px;
+    margin-bottom:8px;
+}
+
+nav {
+    background-color:#7293ff;
+    /* position: -webkit-sticky; to work on safari */
+    position: sticky;
+    top:0px; /* this enables sticky */
+    z-index:3; /* goes beneath section as section's z-index: 2 */
+    padding:40px;
+    margin-bottom:8px;
+}
+
+section {
+    background-color:#ffd3e2;
+    /* because of min-height only section has no vertical horizontal centered alignment unless do some var() as done below in order to fix it */
+    min-height:740px; /* if let's say you make it x2 times higher still the footer adjust fluently to it */
+    line-height: 740px;
+    line-height: var(min-height); /* if min-height changed auto due to content incrementation line-height will inhert its value */
+    position: relative;
+    z-index:2;
+    padding:8px;
+    margin-bottom:8px; /* This will decide on how far away the footer will be from section */
+}
+
+footer {
+    background-color:lightblue;
+    /* position: -webkit-sticky; to work on safari */
+    position:sticky; /* top or bottom prop enables sticky */
+    bottom:0px; /* be careful with this as if set up e.g :50px would make to scroll footer underneath of section */ 
+    z-index:1; /* goes underneath of section */
+    padding: 50px;
+}
+</style>
+</head>
+<body>
+<div class="w3-row">
+    <div name="wrapper" class="w3-container w3-col s12 m12 l12 w3-cell w3-mobile w3-cell-middle">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <section>Section</section>
+        <footer>Footer</footer>
+    </div>
+</div>
+</body>
+</html>
