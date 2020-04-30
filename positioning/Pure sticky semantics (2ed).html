@@ -3,8 +3,8 @@
     <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./css/w3.css"> 
-    <style>
-    * {
+<style>
+* {
     box-sizing:border-box;
 }
 
@@ -16,10 +16,9 @@ div[name="wrapper"] {
     text-align: center;
 }
 
-header { /* meant for header-image */
-    background-color:yellow;
+img { /* meant for header-image */
     position: static;
-    padding:40px;
+    margin-top: 8px;
     margin-bottom:8px;
 }
 
@@ -41,15 +40,15 @@ section {
     line-height: var(min-height); /* if min-height changed auto due to content incrementation line-height will inhert its value */
     position: relative;
     z-index:2;
-    padding:8px;
-    margin-bottom:8px; /* This will decide on how far away the footer will be from section */
+    /* padding:8px; */
+    margin-bottom:16px; /* This will decide on how far away the footer will be from section (2x footer) */
 }
 
 footer {
     background-color:lightblue;
     /* position: -webkit-sticky; to work on safari */
     position:sticky; /* top or bottom prop enables sticky */
-    bottom:0px; /* be careful with this as if set up e.g :50px would make to scroll footer underneath of section */ 
+    bottom:8px; /* be careful with this as if set up e.g :50px would make to scroll footer underneath of section */ 
     z-index:1; /* goes underneath of section */
     padding: 50px;
 }
@@ -58,7 +57,7 @@ footer {
 <body>
 <div class="w3-row">
     <div name="wrapper" class="w3-container w3-col s12 m12 l12 w3-cell w3-mobile w3-cell-middle">
-        <header>Header</header>
+        <img src="fibulax.png" class="w3-image">
         <nav>Nav</nav>
         <section>Section</section>
         <footer>Footer</footer>
